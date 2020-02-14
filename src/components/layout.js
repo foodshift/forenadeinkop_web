@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   // </footer>
 
   return (
-    <div className='w-100 bt b--black-10 bg-white sans-serif'>
+    <div className='w-100 b--black-10 bg-white sans-serif'>
       <main>{children}</main>
       <footer class="bg-white black-70 ph3 ph5-ns pv5 pv6-ns bt b--black-10">
         <div class="mw9 center">
