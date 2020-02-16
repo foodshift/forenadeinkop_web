@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import jsonp from 'jsonp'
 
 const formMessages = {
-  success: '👍👍Tack, nu är du anmäld.',
-  duplicate: 'Epostadressen är redan anmäld.',
-  error: '👎Tyvärr, något gick snett.'
+  success: '✅ Tack, nu är du anmäld.',
+  duplicate: '😛 Epostadressen är redan anmäld.',
+  error: '🔴 Tyvärr, något gick snett.'
 }
 
 export const MailchimpForm = () => {
@@ -52,17 +52,17 @@ export const MailchimpForm = () => {
           placeholder='Epostadress…'
           required
           onChange={handleEmailChange}
-          className='input-reset ba b--black-20 br2 ph3 pv2 mb2 dib'
+          className='input-reset ba b--dark-green green br2 ph3 pv2 mb2 dib'
         />
 
         {status === 'sending'
-          ? <button className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-black-60 b--none ld-ext-right running'>
+          ? <button className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-dark-green b--none ld-ext-right running'>
             Skickar
             <div className='ld ld-ring ld-spin' style={{ width: '1em', height: '1em' }} />
           </button>
-          : <button className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-black-60 b--none'>
+          : <button className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-dark-green b--none'>
             Skicka
-          </button>}
+            </button>}
         {status === 'duplicate' && <div>{formMessages.duplicate}</div>}
         {status === 'error' && <div>{formMessages.error}</div>}
         {status === 'success' && <div>{formMessages.success}</div>}
