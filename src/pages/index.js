@@ -70,12 +70,10 @@ const IndexPage = () => (
             <p className='mt2'>Projektet är initierat av <a href='https://foodshift.se' className='link'>Food Shift</a> och <a href='https://sormland.coompanion.se/' className='link'>Coompanion Sörmland</a>. Projekttid: 1 februari till 31 oktober 2020.</p>
 
           </p>
-
           <p className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
-
             <h2 className='f3-l f4 lh-copy mt0 mb1'>Datum</h2>
 
-            4 april – Träffas på riktigt 1
+            4 april - Träff 1
             <br />Plats: Bottnafjordens Inköpsförening
             <p className='mt2'>maj - onlineträff 1</p>
             <p className='mt2'>juni - onlineträff 2</p>
@@ -84,7 +82,7 @@ const IndexPage = () => (
 
             <p className='mt2'>september - onlineträff 4</p>
 
-            <p className='mt2'>25 september – Träffas på riktigt 2
+            <p className='mt2'>25 september - Träff 2
             </p>
 
           </p>
