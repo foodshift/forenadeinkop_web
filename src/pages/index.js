@@ -70,6 +70,7 @@ const IndexPage = () => (
             <p className='mt2'>Projektet är initierat av <a href='https://foodshift.se' className='link'>Food Shift</a> och <a href='https://sormland.coompanion.se/' className='link'>Coompanion Sörmland</a>. Projekttid: 1 februari till 31 oktober 2020.</p>
 
           </p>
+
           <p className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
 
             <h2 className='f3-l f4 lh-copy mt0 mb1'>Datum</h2>
