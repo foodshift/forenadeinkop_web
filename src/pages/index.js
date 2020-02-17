@@ -66,7 +66,7 @@ const IndexPage = () => (
     <Section backgroundColor='bg-green' textColor='near-white'>
       <div className='fl w-100 mh0 mb1 mb2-ns'>
         <p className='f4 f3-m f2-l fw7 lh-title mt0 mb0 pt2'>
-          <span className='yellow'>Inbjudan!</span> Den 4 april ordnar vi projektets första träff. Möt andra inköpsföreningar under en heldag i Bohuslän hos Bottnafjordens Inköpsförening. <a href='#' className='link underline yellow hover-orange'>Läs mer</a>
+          <span className='yellow'>Inbjudan!</span> Den 4 april ordnar vi projektets första träff. Möt andra inköpsföreningar under en heldag i Bohuslän hos Bottnafjordens Inköpsförening. <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline yellow hover-orange'>Läs mer</a>
         </p>
       </div>
     </Section>
@@ -118,7 +118,7 @@ const IndexPage = () => (
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
           <h2 className='f3-l f4 lh-copy mt0 mb1'>Projektets mål</h2>
 
-          <p className='mt2'>Dokumentera befintliga föreningar, skriv och filma! Sammanställ insikter i en handbok som kan hjälpa nya att komma igång.</p>
+          <p className='mt2'>Dokumentera befintliga föreningar, skriv och filma! Sammanställ insikter i en <a href='https://handbok.forenadeinkop.se' className='link underline green hover-yellow'>handbok</a> som kan hjälpa nya att komma igång.</p>
 
           <p className='mt2'>Anordna ett antal träffar, både fysiska och digitala, i syfte att stärka samarbete och nätverkande.</p>
 
@@ -131,7 +131,7 @@ const IndexPage = () => (
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pl3-l measure lh-copy f5 f4-l'>
           <h2 className='f3-l f4 lh-copy mt0 mb3'>Datum</h2>
           <CalendarItem date='4' month='apr'>
-            <a href='#' className='link underline green hover-yellow'>Nätverksträff 1</a>
+            <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline green hover-yellow'>Nätverksträff 1</a>
             <br />Plats: Bottnafjordens Inköpsförening
           </CalendarItem>
           <CalendarItem date='7' month='maj'>
