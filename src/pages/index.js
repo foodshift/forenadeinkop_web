@@ -4,23 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from '../components/layout'
 import { MailchimpForm } from '../components/MailchimpForm'
 import React from 'react'
+import { Section } from '../components/Section'
 import Seo from '../components/seo'
 
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-
-const Section = (props) => {
-  const backgroundColor = props.backgroundColor || 'bg-near-white'
-  const textColor = props.textColor || 'green'
-  return (
-    <section className={`${backgroundColor} ${textColor} pv3 pv4-ns`}>
-      <div className='ph3 ph5-ns'>
-        <div className='cf w-100 center mw8'>
-          {props.children}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 const CalendarItem = (props) => {
   return (
@@ -106,7 +93,7 @@ const IndexPage = () => (
       <div className='fl w-100 mh0 mb1 mb2-ns'>
         <p className='lh-copy f4 f3-l fw7 mt0 mb0 pt2'>
           <span className='yellow'>Anmäl dig till Förenade Inköp!</span>{' '}
-            Det kostar inget att delta i projektet, anmälan är inte bindande på något sätt. Anmälan innebär att du blir inbjuden till våra aktiviteter och får tillgång till chatkanalen där du kan kommunicera med övriga deltagare.
+          Det kostar inget att delta i projektet, anmälan är inte bindande på något sätt. Anmälan innebär att du blir inbjuden till våra aktiviteter och får tillgång till chatkanalen där du kan kommunicera med övriga deltagare.
 
           <MailchimpForm />
         </p>
