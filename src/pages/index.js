@@ -37,15 +37,15 @@ const IndexPage = () => (
           Kooperativ livsmedelshandel för lokal utveckling.
         </p>
         <p className='fl w-100 w-40-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l mb3'>
-          Det saknas i dagsläget väl utvecklade lokala försäljningskanaler där små matproducenter kan få avsättning för sina produkter. Befintliga kanaler är ofta dåligt utvecklade eller inte tillgängliga. Nya typer av lokala logistiksystem är en grundförutsättning för hållbar utveckling på landsbygden.
+          Matproducenter och konsumenter når inte varandra. Det saknas i dagsläget väl utvecklade lokala försäljningskanaler där små producenter kan sälja sina produkter. Befintliga kanaler är ofta dåligt utvecklade eller inte tillgängliga. Gårdsbutiker, REKO-ringar handelsappar och lokala marknader förmår inte på allvar konkurrera med bekvämligheten de stora matkedjorna erbjuder. En nygammal typ av lokal handel behövs för en hållbar utveckling på landsbygden!
         </p>
         <p className='fl w-100 w-40-l mh0 mt0 pr0 pl3-l measure lh-copy f5 f4-l mb3'>
-          I kooperativa inköpsföreningar organiserar medlemmarna gemensamma matinköp från grossister och lokala matproducenter. Drivkraften handlar ofta om en vilja att handla mer lokalt, mer ekologiskt eller få tillgång till produkter som annars saknas hos de större matkedjorna.
+          I kooperativa inköpsföreningar organiserar medlemmarna gemensamma matinköp från grossister och lokala matproducenter. Drivkraften handlar ofta om en vilja att handla mer lokalt, mer ekologiskt eller få tillgång till produkter som annars saknas hos de större matkedjorna. Kooperativt organiserande stärker lokalsamhället och gör det möjligt att driva matbutiker på små orter som ratas av de stora kedjorna.
         </p>
       </div>
       <div className='fl w-100 mh0 mb2 mb3-ns'>
         <p className='f4 f3-m f2-l fw7 lh-title mt0 mb0'>
-          Förenade Inköp är ett projekt med mål att fler inköpsföreningar och lokala kooperativa matbutiker startas. Vi vill också bidra till att befintliga föreningar inleder djupare samarbeten.
+          Förenade Inköp är ett projekt med mål att fler inköpsföreningar och lokala kooperativa matbutiker startas. Vi vill också bidra till att befintliga föreningar inleder djupare samarbeten. Om du deltar i att driva en inköpsförening eller är intresserad av att starta en, anmäl dig som deltagare i projektet!
         </p>
       </div>
     </Section>
@@ -53,7 +53,7 @@ const IndexPage = () => (
     <Section backgroundColor='bg-green' textColor='near-white'>
       <div className='fl w-100 mh0 mb1 mb2-ns'>
         <p className='f4 f3-m f2-l fw7 lh-title mt0 mb0 pt2'>
-          <span className='yellow'>Inbjudan!</span> Den 4 april ordnar vi projektets första träff. Möt andra inköpsföreningar under en heldag i Bohuslän hos Bottnafjordens Inköpsförening. <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline yellow hover-orange'>Läs mer</a>
+          <span className='yellow'>Inbjudan!</span> Den 4 april bjuder vi in till uppstartsmöte hos Bottnafjordens Inköpsförening i Bohuslän. Möt andra inköpsföreningar, bli inspirerad av hur föreningar och kooperativ drivs runt om i landet. <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline yellow hover-orange'>Läs mer →</a>
         </p>
       </div>
     </Section>
@@ -91,10 +91,9 @@ const IndexPage = () => (
 
     <Section backgroundColor='bg-green' textColor='near-white'>
       <div className='fl w-100 mh0 mb1 mb2-ns'>
-        <p className='lh-copy f4 f3-l fw7 mt0 mb0 pt2'>
-          <span className='yellow'>Anmäl dig till Förenade Inköp!</span>{' '}
-          Det kostar inget att delta i projektet, anmälan är inte bindande på något sätt. Anmälan innebär att du blir inbjuden till våra aktiviteter och får tillgång till chatkanalen där du kan kommunicera med övriga deltagare.
-
+        <p className='lh-copy f4 f3-l fw7 mt0 mb0 pt2 measure'>
+          <span className='yellow'>Delta i projektet!</span>{' '}
+          Hur mycket du väljer att delta är helt upp dig! Anmäl dig för att bli inbjuden till våra kommunikationskanaler, få uppdateringar från projektet och bli inbjudan till fler träffar.
           <MailchimpForm />
         </p>
       </div>
@@ -118,7 +117,7 @@ const IndexPage = () => (
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pl3-l measure lh-copy f5 f4-l'>
           <h2 className='f3-l f4 lh-copy mt0 mb3'>Datum</h2>
           <CalendarItem date='4' month='apr'>
-            <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline green hover-yellow'>Nätverksträff 1</a>
+            <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline green hover-yellow'>Uppstartsmöte</a>
             <br />Plats: Bottnafjordens Inköpsförening
           </CalendarItem>
           <CalendarItem date='7' month='maj'>

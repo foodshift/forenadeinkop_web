@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
             Skicka gärna ett mejl för att komma i kontakt med projektgruppen. <a href='mailto:hej@forenadeinkop.se' className='link underline green hover-yellow'>hej@forenadeinkop.se</a>
           </div>
           <div className='w-90 w-60-l dib v-top tl tr-l pt4 pt0-l'>
-            <a href='https://fooddhift.se' className='v-mid'><img src={ImgFoodShift} className='w-20 pr3' /></a>
-            <a href='https://sormland.coompanion.se/' className='v-mid'><img src={ImgCoompanion} className='w-30 pr3' /></a>
+            <a href='https://fooddhift.se' className='v-mid'><img src={ImgFoodShift} className='w-20 pr5' /></a>
+            <a href='https://sormland.coompanion.se/' className='v-mid'><img src={ImgCoompanion} className='w-30 pr5' /></a>
             <img src={ImgJordbruksfonden} className='w-20 v-mid' />
           </div>
         </Section>
