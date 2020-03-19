@@ -9,6 +9,8 @@ import Seo from '../components/seo'
 import Marcus from '../images/marcus.jpg'
 import Kristofer from '../images/kristofer.jpg'
 import Viktor from '../images/viktor.jpg'
+import Bottna from '../images/logos/bottna.png'
+import Mikrofonden from '../images/logos/mikrofonden.png'
 
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -183,6 +185,20 @@ const IndexPage = () => (
           <p className='mb1 mt0'><a href='mailto:kristofer@foodshift.se' className='link underline green hover-yellow'>kristofer@foodshift.se</a></p>
         </div>
       </div>
+    </BorderSection>
+    <BorderSection>
+      <h2 className='f3-l f4 lh-copy mt0 mb4 tc'>Partners</h2>
+      <div className='w-100 tc'>
+        <a href='https://mikrofonden.se/' className='link'>
+          <img src={Mikrofonden} className='dib w4 o-50 glow' />
+        </a>
+
+        <a href='https://mikrofonden.se/' className='link'>
+          <img src={Bottna} className='dib w4 pl5 o-50 glow' />
+        </a>
+
+      </div>
+
     </BorderSection>
   </Layout>
 )
