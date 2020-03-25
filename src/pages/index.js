@@ -58,7 +58,10 @@ const IndexPage = () => (
     <Section backgroundColor='bg-green' textColor='near-white'>
       <div className='fl w-100 mh0 pv3'>
         <p className='f4 f3-m f2-l fw7 lh-title mt0 mb0'>
-          <span className='yellow'>Inbjudan!</span> Den 4 april bjuder vi in till uppstartsmöte hos Bottnafjordens Inköpsförening i Bohuslän. Möt andra inköpsföreningar, bli inspirerad av hur föreningar och kooperativ drivs runt om i landet. <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline yellow hover-orange'>Läs mer →</a>
+          <del><span className='yellow'>Inbjudan!</span> Den 4 april bjuder vi in till uppstartsmöte hos Bottnafjordens Inköpsförening i Bohuslän.</del>
+        </p>
+        <p className='pt2 f4 f3-m f2-l fw7 lh-title mt0 mb0'>
+          Startmötet i Bottna är inställt. Vi flyttar in i cyberrymden och genomför startmöte per video istället. 7 april, kl 15-16. Välkommen! Mötesinbjudan och videolänk finns <a href='https://foodshift.se/c/events/13/l/agenda' className='link underline yellow hover-orange'>i kalendern →</a>
         </p>
       </div>
     </Section>
@@ -121,24 +124,18 @@ const IndexPage = () => (
         </div>
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pl3-l measure lh-copy f5 f4-l'>
           <h2 className='f3-l f4 lh-copy mt0 mb3'>Datum</h2>
-          <CalendarItem date='4' month='apr'>
-            <a href='https://forenade-inkop-traff-1.confetti.events/' className='link underline green hover-yellow'>Uppstartsmöte</a>
-            <br />Plats: Bottnafjordens Inköpsförening
+          <CalendarItem date='7' month='apr'>
+            <a href='https://foodshift.se/t/forenade-inkop-startmote/283' className='link underline green hover-yellow'>Uppstartsmöte online</a>
+            <br />Välkommen!
           </CalendarItem>
-          <CalendarItem date='7' month='maj'>
-            Webbinarie 1
+          <CalendarItem date='16' month='apr'>
+            <a href='https://foodshift.se/t/webbinarie-bottnafjordens-inkopsforening/285' className='link underline green hover-yellow'>Webbinarie: Bottnafjordens Inköpsförening</a>
           </CalendarItem>
-          <CalendarItem date='4' month='jun'>
-            Webbinarie 2
+          <CalendarItem date='28' month='apr'>
+            <a href='https://foodshift.se/t/webbinarie-coompanion/286' className='link underline green hover-yellow'>Webbinarie: Coompanion</a>
           </CalendarItem>
-          <CalendarItem date='13' month='aug'>
-            Webbinarie 3
-          </CalendarItem>
-          <CalendarItem date='10' month='sep'>
-            Webbinarie 4
-          </CalendarItem>
-          <CalendarItem date='25' month='sep'>
-            Nätverksträff 2
+          <CalendarItem date='5' month='maj'>
+            <a href='https://foodshift.se/t/webbinarie-mikrofonden/287' className='link underline green hover-yellow'>Webbinarie: Mikrofonden</a>
           </CalendarItem>
         </div>
       </div>
