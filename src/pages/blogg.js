@@ -34,7 +34,7 @@ const Post = ({ data }) => {
         </div>
 
         <div className='fl w-100 mh0 mb3 mb4-l'>
-          <p className='f2 mt0 db fl w-100 f-subheadline-l lh-copy lh-title-l measure mb4 mb4-l fw6'>
+          <p className='f2 mt0 db fl w-100 f-subheadline-l lh-copy lh-title-l measure mb2 fw6'>
             Blogg.
           </p>
         </div>
@@ -42,7 +42,7 @@ const Post = ({ data }) => {
       {
         data.blog.post_stream.posts.reverse().map((post, index) => (
 
-          <BorderSection key={index}>
+          <Section key={index}>
             <div className='fl w-100 mh0 mb2 mb3-ns pt2'>
               <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
 
@@ -59,7 +59,7 @@ const Post = ({ data }) => {
 
               </div>
             </div>
-          </BorderSection>
+          </Section>
         ))
       }
     </Layout>

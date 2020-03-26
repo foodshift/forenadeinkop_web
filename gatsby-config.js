@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-custom-api',
       options: {
-        url: 'https://foodshift.se/t/49/posts.json',
+        url: 'https://foodshift.se/t/290/posts.json',
         rootKey: 'blog',
         schemas: {
           blog: `
