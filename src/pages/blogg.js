@@ -1,26 +1,34 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import { BorderSection, Section } from '../components/Section'
-import Seo from '../components/seo'
-import sanitizeHtml from 'sanitize-html'
-import formatDistance from 'date-fns/formatDistance'
-import parseISO from 'date-fns/parseISO'
-import sv from 'date-fns/locale/sv'
 import '../css/local.css'
 
-const formatExcerpt = (excerpt) => excerpt.replace(/\n/g, '<br/>')
-const formatDate = (datestring) => formatDistance(parseISO(datestring), Date.now(), { locale: sv })
-const formatAvatar = (avatar_template) => <img
-  src={`https://foodshift.se${avatar_template.replace('{size}', '100')}`} className='br-100 dib fl mr2'
-  alt='avatar' style={{ width: 45 }}
+import { Link, graphql } from 'gatsby'
+
+import Layout from '../components/layout'
+import React from 'react'
+import { Section } from '../components/Section'
+import Seo from '../components/seo'
+
+import formatDistance from 'date-fns/formatDistance'
+import parseISO from 'date-fns/parseISO'
+import sanitizeHtml from 'sanitize-html'
+import sv from 'date-fns/locale/sv'
+
+const formatAvatar = (avatarTemplate) => <img
+  src={`https://foodshift.se${avatarTemplate.replace('{size}', '100')}`} className='br-100 dib fl mr2'
+  alt='avatar'
+  style={{ width: 42 }}
 />
 
-const sanitize = (dirty) => sanitizeHtml(dirty, {
+const formatDate = (datestring) => formatDistance(parseISO(datestring), Date.now(), { locale: sv })
+
+const formatCooked = (dirty) => sanitizeHtml(dirty, {
+  transformTags: {
+    a: sanitizeHtml.simpleTransform('a', { class: 'link underline green hover-yellow' })
+  },
   allowedTags: ['b', 'i', 'em', 'strong', 'a', 'img'],
   nonTextTags: ['style', 'script', 'textarea', 'noscript', 'aside'],
   allowedClasses: {
-    img: ['emoji']
+    img: ['emoji'],
+    a: ['link', 'underline', 'green', 'hover-yellow']
   }
 })
 
@@ -29,37 +37,36 @@ const Post = ({ data }) => {
     <Layout>
       <Seo title='Blog' />
       <Section textColor='green'>
-        <div className='center mw9 pt5 pt6-l mb4 mb5-l'>
-          <h3 className='f5 fw6 ttu tracke'>Förenade Inköp</h3>
-        </div>
-
-        <div className='fl w-100 mh0 mb3 mb4-l'>
-          <p className='f2 mt0 db fl w-100 f-subheadline-l lh-copy lh-title-l measure mb2 fw6'>
-            Blogg.
-          </p>
+        <div className='center mw9 pt5 mb4'>
+          <Link to='/' className='link underline green hover-yellow '><h3 className='dib f5 fw6 ttu underline'>Förenade Inköp</h3></Link> / <h3 className='dib f5 fw6 ttu tracke'>Blogg</h3>
         </div>
       </Section>
       {
         data.blog.post_stream.posts.reverse().map((post, index) => (
 
-          <Section key={index}>
-            <div className='fl w-100 mh0 mb2 mb3-ns pt2'>
-              <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
+          <section key={index} className='bg-near-white green pv1 pv2-l'>
+            <div className='ph3 ph5-ns'>
+              <div className='cf w-100 center mw9'>
+                <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
 
-                <p className='mt2 mb3' dangerouslySetInnerHTML={{ __html: sanitize(post.cooked) }} />
-                <p>–</p>
-                <div className='f5'>
-                  <a href={`https://foodshift.se/u/${post.username}`}>
-                    {formatAvatar(post.avatar_template)}
-                  </a>
-                  {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`}>@{post.username}</a>
-                  <br />
-                  Skrev inlägget {formatDate(post.created_at)} sedan
+                  <div className='f6'>
+                    <a href={`https://foodshift.se/u/${post.username}`}>
+                      {formatAvatar(post.avatar_template)}
+                    </a>
+                    {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`} className='link underline green hover-yellow'>@{post.username}</a>
+                    <br />
+                    Skrev inlägget {formatDate(post.created_at)} sedan
+                  </div>
+
+                  <p className='mt2 mb3' dangerouslySetInnerHTML={{ __html: formatCooked(post.cooked) }} />
+
+                  <p>–</p>
+
                 </div>
-
               </div>
             </div>
-          </Section>
+          </section>
+
         ))
       }
     </Layout>
