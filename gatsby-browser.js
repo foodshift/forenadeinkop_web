@@ -6,5 +6,9 @@
 
 // You can delete this file if you're not using it
 
+import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS
 import 'tachyons/css/tachyons.min.css'
 import 'ldbutton/dist/ldbtn.min.css'
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
