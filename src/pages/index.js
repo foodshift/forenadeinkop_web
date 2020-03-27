@@ -118,6 +118,11 @@ const IndexPage = () => (
           <CalendarItem date='16' month='apr'>
             <a href='https://foodshift.se/t/webbinarie-bottnafjordens-inkopsforening/285' className='link underline green hover-yellow'>Webbinarie: Bottnafjordens Inköpsförening</a>
           </CalendarItem>
+
+          <CalendarItem date='24' month='apr'>
+            <a href='https://foodshift.se/t/uppstartsmote-for-handbok-for-inkopsforeningar-och-kooperativ-livsmedelshandel/288' className='link underline green hover-yellow'>Projektmöte: En handbok för inköpsföreningar</a>
+          </CalendarItem>
+
           <CalendarItem date='28' month='apr'>
             <a href='https://foodshift.se/t/webbinarie-coompanion/286' className='link underline green hover-yellow'>Webbinarie: Coompanion</a>
           </CalendarItem>
