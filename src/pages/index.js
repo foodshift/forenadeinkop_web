@@ -1,32 +1,20 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Layout from '../components/layout'
-import { MailchimpForm } from '../components/MailchimpForm'
-import React from 'react'
 import { BorderSection, Section } from '../components/Section'
-import Seo from '../components/seo'
-import Marcus from '../images/marcus.jpg'
-import Kristofer from '../images/kristofer.jpg'
-import Viktor from '../images/viktor.jpg'
-import Bottna from '../images/logos/bottna.png'
-import Mikrofonden from '../images/logos/mikrofonden.png'
-import { Link } from 'gatsby'
+
 import { BlogLatest } from '../components/blog'
+import Bottna from '../images/logos/bottna.png'
+import { Calendar } from '../components/Calendar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Kristofer from '../images/kristofer.jpg'
+import Layout from '../components/layout'
+import { Link } from 'gatsby'
+import { MailchimpForm } from '../components/MailchimpForm'
+import Marcus from '../images/marcus.jpg'
+import Mikrofonden from '../images/logos/mikrofonden.png'
+import React from 'react'
+import Seo from '../components/seo'
+import Viktor from '../images/viktor.jpg'
 
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-
-const CalendarItem = (props) => {
-  return (
-    <div className='cf mb2'>
-      <div className='pa3 bg-green near-white mr2 dib v-mid w3'>
-        <div className='f5 f4-l fw6 lh-solid tc'>{props.date}</div>
-        <div className='f6 f5-l lh-solid tc' style={{ marginTop: -2 }}>{props.month}</div>
-      </div>
-      <div className='dib v-mid'>
-        {props.children}
-      </div>
-    </div>
-  )
-}
 
 const IndexPage = () => (
   <Layout>
@@ -111,24 +99,7 @@ const IndexPage = () => (
         </div>
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pl3-l measure lh-copy f5 f4-l'>
           <h2 className='f3-l f4 lh-copy mt0 mb3'>Datum</h2>
-          <CalendarItem date='7' month='apr'>
-            <a href='https://foodshift.se/t/forenade-inkop-startmote/283' className='link underline green hover-yellow'>Uppstartsmöte online</a>
-            <br />Välkommen!
-          </CalendarItem>
-          <CalendarItem date='16' month='apr'>
-            <a href='https://foodshift.se/t/webbinarie-bottnafjordens-inkopsforening/285' className='link underline green hover-yellow'>Webbinarie: Bottnafjordens Inköpsförening</a>
-          </CalendarItem>
-
-          <CalendarItem date='24' month='apr'>
-            <a href='https://foodshift.se/t/uppstartsmote-for-handbok-for-inkopsforeningar-och-kooperativ-livsmedelshandel/288' className='link underline green hover-yellow'>Projektmöte: En handbok för inköpsföreningar</a>
-          </CalendarItem>
-
-          <CalendarItem date='28' month='apr'>
-            <a href='https://foodshift.se/t/webbinarie-coompanion/286' className='link underline green hover-yellow'>Webbinarie: Coompanion</a>
-          </CalendarItem>
-          <CalendarItem date='5' month='maj'>
-            <a href='https://foodshift.se/t/webbinarie-mikrofonden/287' className='link underline green hover-yellow'>Webbinarie: Mikrofonden</a>
-          </CalendarItem>
+          <Calendar />
         </div>
       </div>
     </Section>

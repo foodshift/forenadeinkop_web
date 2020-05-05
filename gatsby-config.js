@@ -46,6 +46,14 @@ module.exports = {
           `
         }
       }
+    },
+    {
+      resolve: 'gatsby-source-discourse-topic-list',
+      options: {
+        url: 'https://foodshift.se',
+        endPoint: 'tags/c/events/13/forenade-inkop/l/agenda.json',
+        rootKey: 'calendar'
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
