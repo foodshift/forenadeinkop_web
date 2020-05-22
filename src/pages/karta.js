@@ -295,7 +295,7 @@ const CoopMap = (props) => {
 
 const IndexPage = ({ data }) => (
   <>
-    <Seo title='Förenade Inköp – Karta' description='En karta över svenska matkooperativ – kooperativa matbutiker, inköpsföreningar, producentkooperativ, personalkooperativ' />
+    <Seo title='Förenade Inköp – Karta' description='En karta över svenska matkooperativ – kooperativa matbutiker, inköpsföreningar, producentkooperativ och personalkooperativ.' />
 
     <div className='w-100 b--black-10 sans-serif' style={{ height: '100vh' }}>
       <div className='dn'>
@@ -314,7 +314,7 @@ const IndexPage = ({ data }) => (
               Saknar du någon verksamhet? Du kan själv lägga till eller redigera information.
             </p>
             <p>
-              <Link to='https://foodshift.se/c/forenade-inkop/kooperativ/35' className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-dark-green b--none'>Skapa / redigera</Link>
+              <a href='https://foodshift.se/c/forenade-inkop/kooperativ/35' className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-dark-green b--none'>Skapa / redigera</a>
             </p>
             <p>
               Skicka gärna ett mejl för att komma i kontakt med projektgruppen. <a href='mailto:hej@forenadeinkop.se' className='link underline green hover-yellow'>hej@forenadeinkop.se</a>
