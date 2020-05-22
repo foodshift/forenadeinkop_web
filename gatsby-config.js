@@ -5,7 +5,6 @@ module.exports = {
     author: '@food_shift'
   },
   plugins: [
-    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -53,6 +52,14 @@ module.exports = {
         url: 'https://foodshift.se',
         endPoint: 'tags/c/events/13/forenade-inkop/l/agenda.json',
         rootKey: 'calendar'
+      }
+    },
+    {
+      resolve: 'gatsby-source-discourse-topic-list',
+      options: {
+        url: 'https://foodshift.se',
+        endPoint: 'c/forenade-inkop/kooperativ/35.json',
+        rootKey: 'kooperativ'
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

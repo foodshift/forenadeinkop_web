@@ -1,0 +1,53 @@
+
+
+.ol-zoom {
+  right: .5em;
+  left: unset !important;
+}
+
+.ol-popup.default > div {
+  border-color: #19a974 !important;
+  padding: 5px
+}
+
+.ol-popup.default .anchor {
+  color: #19a974 !important;
+}
+
+.ol-overlay.bottomDrawer {	
+  top: 55% !important;
+  height: auto;
+  background: #fff;
+}
+
+.ol-overlay.sideDrawer {	
+  width: 40% !important;
+  background: #fff;
+}
+
+/* style the close box */
+.ol-overlay .ol-closebox {
+  color: #19a974;
+}
+.ol-overlay .ol-closebox:before {	
+  content:"\2573" !important;
+} 
+
+.ol-selectable {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text
+}
+
+.my-selectable {
+  height: 100%;
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  overflow-y: scroll; 
+}
+

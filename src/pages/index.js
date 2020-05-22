@@ -18,7 +18,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 const IndexPage = () => (
   <Layout>
-    <Seo title='Home' />
+    <Seo title='Förenade Inköp' />
 
     <Section textColor='green'>
       <div className='center mw9 pt5 pt6-l mb4 mb5-l'>
