@@ -45,11 +45,24 @@ const buildGeoJSON = async (data) => {
     try {
       const parsedRaw = fm(topic.raw)
 
-      if (parsedRaw.attributes.stad) {
-        const query = parsedRaw.attributes.gatuadress + ', ' + parsedRaw.attributes.stad
+      const city = parsedRaw.attributes.stad
+        ? parsedRaw.attributes.stad
+        : parsedRaw.attributes.Stad
+
+      const street = parsedRaw.attributes.gatuadress
+        ? parsedRaw.attributes.gatuadress
+        : parsedRaw.attributes.Gatuadress
+
+      if (city) {
+        const query = street
+          ? `${street}, ${city}, Sweden`
+          : `${city}, Sweden`
 
         const latLng = await geocode(client, query)
         const coordinates = [latLng.lng, latLng.lat]
+
+        console.log(query)
+        console.log(latLng)
 
         const feature = {
           type: 'Feature',
@@ -59,7 +72,7 @@ const buildGeoJSON = async (data) => {
           },
           properties: {
             stad: parsedRaw.attributes.stad,
-            gatuadress: parsedRaw.attributes.stad,
+            gatuadress: parsedRaw.attributes.gatuadress,
             beskrivning: parsedRaw.attributes.beskrivning,
             namn: topic.title,
             slug: topic.slug,
