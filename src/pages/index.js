@@ -91,7 +91,7 @@ const IndexPage = () => (
       </div>
     </Section>
 
-    <Section>
+    <Section backgroundColor='bg-white'>
       <div className='fl w-100 mh0 mb2 mb3-ns pt2'>
         <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
           <h2 className='tk-rift-soft f2-l f3 lh-copy mt0 mb1'>Projektets mål</h2>
