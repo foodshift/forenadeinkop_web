@@ -13,30 +13,30 @@ const formatAvatar = (avatarTemplate) => <img
   src={`https://foodshift.se${avatarTemplate.replace('{size}', '100')}`} className='br-100 dib fl mr2'
   alt='avatar'
   style={{ width: 42 }}
-/>
+                                         />
 
 const formatDate = (datestring) => formatDistance(parseISO(datestring), Date.now(), { locale: sv })
 
 const formatCooked = (dirty) => sanitizeHtml(dirty, {
   transformTags: {
-    a: sanitizeHtml.simpleTransform('a', { class: 'link underline yellow hover-orange' })
+    a: sanitizeHtml.simpleTransform('a', { class: 'link underline white hover-yellow' })
   },
   allowedTags: ['b', 'i', 'em', 'strong', 'a', 'img'],
   nonTextTags: ['style', 'script', 'textarea', 'noscript', 'aside'],
   allowedClasses: {
     img: ['emoji'],
-    a: ['link', 'underline', 'yellow', 'hover-orange']
+    a: ['link', 'underline', 'white', 'hover-yellow']
   }
 })
 
 const formatPost = (post) => {
   return (
-    <div className='fl w-100 w-40-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l mb4 mb3-l mr4-l'>
+    <div className='tk-atten-round-new fl w-100 w-40-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l mr4-l'>
       <div className='f6'>
         <a href={`https://foodshift.se/u/${post.username}`}>
           {formatAvatar(post.avatar_template)}
         </a>
-        {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`} className='link underline yellow hover-orange'>@{post.username}</a>
+        {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`} className='link underline white hover-yellow'>@{post.username}</a>
         <br />
         Skrev inlägget {formatDate(post.created_at)} sedan
       </div>

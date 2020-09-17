@@ -22,13 +22,13 @@ const formatDate = (datestring) => formatDistance(parseISO(datestring), Date.now
 
 const formatCooked = (dirty) => sanitizeHtml(dirty, {
   transformTags: {
-    a: sanitizeHtml.simpleTransform('a', { class: 'link underline green hover-yellow' })
+    a: sanitizeHtml.simpleTransform('a', { class: 'link fi-link' })
   },
   allowedTags: ['b', 'i', 'em', 'strong', 'a', 'img'],
   nonTextTags: ['style', 'script', 'textarea', 'noscript', 'aside'],
   allowedClasses: {
     img: ['emoji'],
-    a: ['link', 'underline', 'green', 'hover-yellow']
+    a: ['link', 'fi-link']
   }
 })
 
@@ -36,15 +36,15 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Seo title='Blog' />
-      <Section textColor='green'>
-        <div className='center mw9 pt5 mb4'>
-          <Link to='/' className='link underline green hover-yellow '><h3 className='dib f5 fw6 ttu underline'>Förenade Inköp</h3></Link> / <h3 className='dib f5 fw6 ttu tracke'>Blogg</h3>
+      <Section>
+        <div className='center mw9 pt5 mb4 tk-rift-soft f3 f2-l lh-copy'>
+          <Link to='/' className='menu fi-gray link underline'>Förenade Inköp</Link> / <span className='menu-current fi-gray'>BLOGG</span>
         </div>
       </Section>
       {
         data.blog.post_stream.posts.reverse().map((post, index) => (
 
-          <section key={index} className='bg-near-white green pv1 pv2-l'>
+          <section key={index} className='bg-fi-pink fi-gray pv1 pv2-l'>
             <div className='ph3 ph5-ns'>
               <div className='cf w-100 center mw9'>
                 <div className='fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure lh-copy f5 f4-l'>
@@ -53,7 +53,7 @@ const Post = ({ data }) => {
                     <a href={`https://foodshift.se/u/${post.username}`}>
                       {formatAvatar(post.avatar_template)}
                     </a>
-                    {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`} className='link underline green hover-yellow'>@{post.username}</a>
+                    {post.name}{' '}<a href={`https://foodshift.se/u/${post.username}`} className='link fi-link'>@{post.username}</a>
                     <br />
                     Skrev inlägget {formatDate(post.created_at)} sedan
                   </div>

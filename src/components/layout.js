@@ -12,6 +12,8 @@ import ImgFoodShift from '../images/logos/foodshift.png'
 import ImgCoompanion from '../images/logos/coompanion.jpg'
 import ImgJordbruksfonden from '../images/logos/jordbruksfonden.jpg'
 
+import '../css/fonts.css'
+
 const Image = (props) => {
   return (
     <img src={props.src} className='w-10' t />

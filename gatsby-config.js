@@ -61,6 +61,14 @@ module.exports = {
         endPoint: 'c/forenade-inkop/kooperativ/35.json',
         rootKey: 'kooperativ'
       }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

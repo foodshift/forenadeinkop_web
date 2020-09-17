@@ -19,6 +19,7 @@
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-source-custom-api": "^2.1.4",
     "gatsby-source-discourse-topic-list": "^0.0.2",

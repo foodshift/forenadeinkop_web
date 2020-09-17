@@ -17,12 +17,12 @@ export const CalendarItem = (props) => {
 
   return (
     <div className='cf mb2'>
-      <div className='pa3 bg-green near-white mr2 dib v-mid w3'>
+      <div className='pa3 bg-fi-green near-white mr2 dib v-mid w3'>
         <div className='f5 f4-l fw6 lh-solid tc'>{eventDate.getDate()}</div>
         <div className='f6 f5-l lh-solid tc' style={{ marginTop: -2 }}>{month}</div>
       </div>
       <div className='dib v-mid'>
-        <a href={`https://foodshift.se/t/${props.data.slug}/${props.data.id}`} className='link underline green hover-yellow'>{props.data.title}</a>
+        <a href={`https://foodshift.se/t/${props.data.slug}/${props.data.id}`} className='link fi-link'>{props.data.title}</a>
 
       </div>
     </div>

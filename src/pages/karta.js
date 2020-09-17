@@ -3,6 +3,7 @@ import 'ol-ext/dist/ol-ext.min.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 import '../css/karta.css'
+import '../css/fonts.css'
 
 import { Circle as CircleStyle, Fill, Style } from 'ol/style'
 import { DragRotateAndZoom, Select, defaults as defaultInteractions } from 'ol/interaction'
@@ -104,7 +105,7 @@ const CoopMap = (props) => {
   const showPopup = (feature) => {
     const title = () => `<div>${feature.get('namn')}</div>`
     const content = `
-        <div class='green f5 fw6'>
+        <div class='fi-green f5 fw6'>
           ${title()}
         </div>
       `
@@ -139,22 +140,22 @@ const CoopMap = (props) => {
   const getOverlayContent = (feature) => {
     // Override function
     const renderer = {
-      image(href, title, text) {
+      image (href, title, text) {
         href = href.substring(9)
         const parts = href.split('.')
         const decodedBuffer = base62Decoder.decode(parts[0])
         const hexString = Buffer.from(decodedBuffer).toString('hex')
         return `<img src="https://foodshift.se/uploads/default/original/1X/${hexString}.${parts[1]}"/>`
       },
-      link(href, title, text) {
-        return `<a href='${href}' title='${title}' class='link underline green hover-yellow'>${text}</a>`
+      link (href, title, text) {
+        return `<a href='${href}' title='${title}' class='link fi-link'>${text}</a>`
       }
     }
 
     marked.use({ renderer })
 
     const title = `
-      <h2 class='f3-l f4 lh-copy mt0 mb1'>
+      <h2 class='tk-rift-soft f2-l f3 lh-copy mt0 mb1'>
         ${feature.get('namn')}
       </h2>
     `
@@ -166,11 +167,11 @@ const CoopMap = (props) => {
     `
     const link = `
       <p>
-        <a class='link underline green hover-yellow' href='https://foodshift.se/t/${feature.get('slug')}/${feature.get('id')}' >✍️ Redigera / kommentera</a>
+        <a class='link fi-link' href='https://foodshift.se/t/${feature.get('slug')}/${feature.get('id')}' >✍️ Redigera / kommentera</a>
       </p>
     `
     const content = `
-      <div class='green ph4 pv4 lh-copy f5 f4-l mb3 my-selectable measure center'>
+      <div class='fi-gray tk-atten-round-new ph4 pv4 lh-copy f5 f4-l mb3 my-selectable measure center'>
         ${title}
         ${body}
         ${link}
@@ -300,8 +301,8 @@ const IndexPage = ({ data }) => (
     <div className='w-100 b--black-10 sans-serif' style={{ height: '100vh' }}>
       <div className='dn'>
         <div id='welcome'>
-          <div className='green ph4 pv4 lh-copy f5 f4-l mb3 my-selectable measure center'>
-            <h2 className='f3-l f4 lh-copy mt0 mb1'>
+          <div className='fi-gray tk-atten-round-new ph4 pv4 lh-copy f5 f4-l mb3 my-selectable measure center'>
+            <h2 className='tk-rift-soft f2-l f3 lh-copy mt0 mb1'>
               En karta över svenska matkooperativ
             </h2>
             <p>
@@ -314,10 +315,10 @@ const IndexPage = ({ data }) => (
               Saknar du någon verksamhet? Du kan själv lägga till eller redigera information.
             </p>
             <p>
-              <a href='https://foodshift.se/c/forenade-inkop/kooperativ/35' className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-dark-green b--none'>Skapa / redigera</a>
+              <a href='https://foodshift.se/c/forenade-inkop/kooperativ/35' className='link dim br2 ph3 pv2 ml2 mb2 dib white bg-fi-green b--none'>Skapa / redigera</a>
             </p>
             <p>
-              Skicka gärna ett mejl för att komma i kontakt med projektgruppen. <a href='mailto:hej@forenadeinkop.se' className='link underline green hover-yellow'>hej@forenadeinkop.se</a>
+              Skicka gärna ett mejl för att komma i kontakt med projektgruppen. <a href='mailto:hej@forenadeinkop.se' className='link fi-link'>hej@forenadeinkop.se</a>
             </p>
             <p>
               <img src={DrawerLogos} className='w-100 mt5' />
@@ -326,10 +327,11 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
         <div id='breadcrumb' className='absolute z-1'>
-          <Section textColor='green' backgroundColor='transparent'>
-            <div className='center mw9 mb4'>
-              <Link to='/' className='link underline green hover-yellow '><h3 className='dib f5 fw6 ttu underline'>Förenade Inköp</h3></Link> / <h3 className='dib f5 fw6 ttu tracke'>Karta</h3>
+          <Section backgroundColor='transparent'>
+            <div className='center mw9 pt5 mb4 tk-rift-soft f3 f2-l lh-copy'>
+              <Link to='/' className='menu fi-gray link underline'>Förenade Inköp</Link> / <span className='menu-current fi-gray'>KARTA</span>
             </div>
+
           </Section>
         </div>
       </div>
