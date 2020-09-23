@@ -83,6 +83,8 @@ const CoopMap = (props) => {
     62.0924094
   ]
 
+  //  const center = [2012765.7426781924, 8248096.280073649]
+
   const map = new Map({
     interactions: defaultInteractions().extend([
       new DragRotateAndZoom()
@@ -194,6 +196,24 @@ const CoopMap = (props) => {
     setTimeout(() => { popup.hide() }, 300)
   })
 
+  const getRealCenter = (coordinates) => {
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    if (sideDrawer.getVisible()) {
+      const drawerRightCoord = map.getCoordinateFromPixel([vw * 0.4, vh / 2])
+      const screenLeftCoord = map.getCoordinateFromPixel([0, vh / 2])
+      const coordDiff = drawerRightCoord[0] - screenLeftCoord[0]
+      coordinates[0] -= coordDiff / 2
+    }
+    if (bottomDrawer.getVisible()) {
+      const drawerTopCoord = map.getCoordinateFromPixel([vw / 2, vh * 0.7])
+      const screenBottomCoord = map.getCoordinateFromPixel([vw / 2, vh])
+      const coordDiff = drawerTopCoord[1] - screenBottomCoord[1]
+      coordinates[1] -= coordDiff / 2
+    }
+    return coordinates
+  }
+
   const openDrawer = (content) => {
     if (window.innerHeight > window.innerWidth) {
       bottomDrawer.setContent(content)
@@ -210,12 +230,12 @@ const CoopMap = (props) => {
   selectClick.on('select', function (e) {
     const feature = e.selected[0]
     if (feature) {
-      map.getView().animate({
-        center: feature.getGeometry().getCoordinates(),
-        duration: 500
-      })
       const content = getOverlayContent(feature)
       openDrawer(content)
+      map.getView().animate({
+        center: getRealCenter(feature.getGeometry().getCoordinates()),
+        duration: 500
+      })
       return
     }
     bottomDrawer.hide()
@@ -241,6 +261,7 @@ const CoopMap = (props) => {
             animate: false
           })
         }
+
         mapboxMap.jumpTo({
           center: toLonLat(viewState.center),
           zoom: viewState.zoom - 1,
@@ -284,6 +305,10 @@ const CoopMap = (props) => {
         $('.ol-overlaycontainer')
       )
       openDrawer($('#welcome').html())
+      map.getView().animate({
+        center: getRealCenter(fromLonLat(center)),
+        duration: 500
+      })
     })
     map.addLayer(getMapboxLayer(mapboxMap))
     map.addLayer(markerLayer)
@@ -325,14 +350,6 @@ const IndexPage = ({ data }) => (
 
             </p>
           </div>
-        </div>
-        <div id='breadcrumb' className='absolute z-1'>
-          <Section backgroundColor='transparent'>
-            <div className='center mw9 pt5 mb4 tk-rift-soft f3 f2-l lh-copy'>
-              <Link to='/' className='menu fi-gray link underline'>Förenade Inköp</Link> / <span className='menu-current fi-gray'>KARTA</span>
-            </div>
-
-          </Section>
         </div>
       </div>
       {(typeof window !== 'undefined') ? (
