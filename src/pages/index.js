@@ -27,7 +27,21 @@ const IndexPage = () => (
       <div className="cf w-100 center mw9">
         <Logo class="w-30" />
 
-        <div className="fr tk-rift-soft f3 f2-l lh-copy">
+        <div className="fr tk-rift-soft f3 f2-l lh-copy mt4">
+          <a
+            href="https://foodshift.se/c/forenade-inkop/32"
+            className="menu fi-gray mr4 link underline"
+            target="_blank"
+          >
+            FORUM
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLO7AcO89Czf6ErbDmOYtGfVI1ELgFwvTP"
+            className="menu fi-gray mr4 link underline"
+            target="_blank"
+          >
+            VIDEO
+          </a>
           <Link to="/blogg" className="menu fi-gray mr4 link underline">
             BLOGG
           </Link>
