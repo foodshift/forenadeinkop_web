@@ -48,6 +48,13 @@ const IndexPage = () => (
           <Link to="/karta" className="menu fi-gray link underline">
             KARTA
           </Link>
+          <a
+            href="https://handbok.forenadeinkop.se"
+            className="menu fi-gray mr4 link underline"
+            target="_blank"
+          >
+            HANDBOK
+          </a>
         </div>
 
         <div className="fl w-100 mh0 mb3 mb4-l pt5-l pt4">
