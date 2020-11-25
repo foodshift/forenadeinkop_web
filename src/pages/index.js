@@ -45,7 +45,7 @@ const IndexPage = () => (
           <Link to="/blogg" className="menu fi-gray mr4 link underline">
             BLOGG
           </Link>
-          <Link to="/karta" className="menu fi-gray link underline">
+          <Link to="/karta" className="menu fi-gray mr4 link underline">
             KARTA
           </Link>
           <a
