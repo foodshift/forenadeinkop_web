@@ -27,7 +27,7 @@ const IndexPage = () => (
       <div className="cf w-100 center mw9">
         <Logo class="w-30" />
 
-        <div className="fr tk-rift-soft f3 f2-l lh-copy mt4">
+        <div className="fr-m fr-l tk-rift-soft f5 f4-m f2-l lh-copy mt4">
           <a
             href="https://foodshift.se/c/forenade-inkop/32"
             className="menu fi-gray mr4 link underline"
